@@ -1,1 +1,6 @@
 site_name: My Docs
+
+theme:
+    name: material
+    font:
+        text:Roboto
