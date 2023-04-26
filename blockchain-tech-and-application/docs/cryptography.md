@@ -24,6 +24,71 @@ x \ne y , H(x)=H(y)
 
 bitcoin用的Hash函数：SHA-256(secure hash algorithm)
 
-## 开户过程
+## 功能
+
+### Hash
 
 在本地创造公钥和私钥对。(public key, private key)
+来源于非对称的加密体系 (asymmetric encryption algorithm)
+
+私钥保密；公钥可以公开。
+
+### 签名
+
+交易过程：
+发起交易时，用私钥对交易签名，其他人用公钥验证签名。
+签名用的私钥，验证用公钥。
+
+两人公私钥对相同：实际过程不可行，产生公私对的概率是微乎其微的。
+假设产生共私钥的时候，有一个好的随机源good source of randomness。
+
+# 比特币的数据结构
+
+## Hash pointers
+
+除了保存位置，还会保存hash值。为了检查是否结构体被篡改。
+
+BlockChain is a linked list using hash pointers.first block is called genesis block.创世纪块。
+
+取HASH是将整的区块内容包括pointer合在一起取Hash: tamper-evident log.
+
+保存了后几块
+- 向前方要
+- 算Hash值进行演算
+- 判断正确与否
+
+## Merkle tree
+
+最下方data blocks，上方是hash pointers。
+
+只要记得根节点的hash值就能确保整个数不被篡改。data blocks记录的是每一个交易。
+
+每一个块包含了block header和block body，header只记录值不记录交易，body记录交易。
+
+手机btc钱包：轻节点。只保存header。
+
+![img.png](img.png)
+
+
+### proof of membership/inclusion
+
+time complexity: O(log(n))
+
+proof of non-membership:O(n). 但是对叶节点的排列顺序有要求，按照从小到大排列，时间复杂度减少。
+
+sorted merkle tree(btc 中不存在，不需要验证不存在的交易)
+
+# 共识协议和系统实现
+
+数字货币和纸质货币的区别：可以复制。
+double spending attach
+
+编号：央行维护数据库。记录每个编号的数字货币在谁手中。每次交易都要确认加上看看编号是不是在自己手中。
+问题：繁杂。
+
+去中心化。
+
+
+
+
+
