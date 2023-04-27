@@ -88,6 +88,31 @@ double spending attach
 
 去中心化。
 
+## 区块链
+两部分：block header和block body。
+- block body中交易列表
+- 取哈希值：块头取哈希
+
+## 系统中的节点
+
+- 全节点 full node/fully validating node
+- 轻节点 light node: 只保存header信息
+
+轻节点无法验证交易的合法性。系统中大多数节点是轻节点。
+
+每个人在本地维护一个区块存在的问题：一致性。
+分布式的共识distributed consensus 
+distributed hash table：需要约定有共同的key value pair
+
+分布式系统 impossibility result：eg. FLP
+
+## Bitcoin中的共识协议
+
+部分节点存在恶意
+投票 
+sybil attack：女巫攻击
+
+最长合法链
 
 
 
