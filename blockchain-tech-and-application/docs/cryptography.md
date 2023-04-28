@@ -114,6 +114,30 @@ sybil attack：女巫攻击
 
 最长合法链
 
+## block reward 出块奖励
+
+coinbase transaction：决定发行货币的唯一方法
+刚开始出块奖励：50BTC；21万个币之后奖励就要减半
+
+
+# Bitcoin 系统的具体实现
+
+UTXO数据结构：还没花掉的交易的集合。 
+
+- transaction-based ledger(BTC)
+- account-based ledger (ETH)
+
+
+用于快速检测双花攻击。
+
+交易费：transaction fee
+
+？ 10分钟挖一个 是大家一起竞争吗 /10分钟之后才发布 谁发布
+？ 恶意节点 集合起来 串成一长链
+
+
+
+
 
 
 
