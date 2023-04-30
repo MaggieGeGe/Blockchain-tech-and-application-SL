@@ -49,7 +49,7 @@ bitcoin用的Hash函数：SHA-256(secure hash algorithm)
 除了保存位置，还会保存hash值。为了检查是否结构体被篡改。
 
 BlockChain is a linked list using hash pointers.first block is called genesis block.创世纪块。
-
+￥」
 取HASH是将整的区块内容包括pointer合在一起取Hash: tamper-evident log.
 
 保存了后几块
@@ -86,7 +86,7 @@ double spending attach
 编号：央行维护数据库。记录每个编号的数字货币在谁手中。每次交易都要确认加上看看编号是不是在自己手中。
 问题：繁杂。
 
-去中心化。
+去中心化。　　　　
 
 ## 区块链
 两部分：block header和block body。
@@ -132,10 +132,12 @@ UTXO数据结构：还没花掉的交易的集合。
 
 交易费：transaction fee
 
-？ 10分钟挖一个 是大家一起竞争吗 /10分钟之后才发布 谁发布
+/ 10分钟挖一个 是大家一起竞争吗 /10分钟之后才发布 谁发布
 ？ 恶意节点 集合起来 串成一长链
 
+## 挖矿的概率分析
 
+- 
 
 
 
