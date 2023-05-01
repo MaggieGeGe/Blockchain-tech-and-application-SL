@@ -137,7 +137,81 @@ UTXO数据结构：还没花掉的交易的集合。
 
 ## 挖矿的概率分析
 
-- 
+- bernoulli trial: a random experiment with binary outcome
+- bernoulli process: a sequence of independent bernoulli trials 
+- 用poisson process近似
+
+process free
+
+## 比特币安全确认
+
+one comfirm不够，等六个comfirmation。
+
+## 比特币网络 bitcoin network
+
+application layer: Bitcoin Blockchain
+network layer: P2P Overlay Network(every node are equal)
+
+simple, robust but not efficient
+
+选节点：随机，鲁棒性
+
+# 挖矿难度
+
+H（block header）<=target
+
+SHA-256 可能取值：2^56
+
+
+difficulty = difficulty_1_target/target
+difficulty_1_target:目标难度为1
+
+不调整难度：系统算力变强，时间变短
+导致问题：分叉，对系统共识没好处并且安全性有危险
+
+有恶意的节点掌握： 51% attack
+
+ETH 的新的共识协议：ghost
+
+分叉多 orphan block不能轻易丢弃，需要给奖励 uncle reward
+
+## 怎样调整挖矿难度
+
+定期调整挖矿难度：14天，每隔2016个区块
+
+目标阈值：target = target *(actual time/expected time);
+实际代码有4倍的限制。
+
+# 挖矿
+
+![img_1.png](img_1.png)
+![img_2.png](img_2.png)
+
+大部分是轻节点，只需要转账不需运行全节点。
+
+## 挖矿设备
+
+### 趋于专业化：
+1. 普通CPU:性价比太低，很多部分是闲置的
+2. GPU：大规模并行计算，但是浮点数计算部分也被闲置 （用CPU挖矿已经比较困难
+3. ASIC芯片application  specific integrated circulation：只能用来计算hash值
+### 大型矿池出现
+pool manager 一个全节点驱动很多矿机。
+弊病：51%attack 可能性增加
+
+分叉攻击：forking attack
+封锁禁用：Boycott
+盗币是不可能的。
+on demanding mining
+
+
+
+
+
+
+
+
+
 
 
 
