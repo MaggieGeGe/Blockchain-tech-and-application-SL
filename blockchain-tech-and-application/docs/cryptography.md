@@ -204,6 +204,31 @@ pool manager 一个全节点驱动很多矿机。
 盗币是不可能的。
 on demanding mining
 
+# 比特币脚本
+
+stack based language
+![img_3.png](img_3.png)
+![img_4.png](img_4.png)
+
+# 分叉
+
+- state fork
+fork attack 
+deliberate fork:人为造成的
+- protocol fork: 不同版本的协议导致了分叉
+ - hard fork
+ - soft fork
+
+# 问答
+1. 接受者不在线怎么办：不影响 只需要记录转帐交易
+2. 全节点收到转帐交易，收款地址是节点从来没听过的：可能
+3. 私钥丢了：没有办法
+4. 可疑交易发生：把钱转走
+5. 
+
+
+
+
 
 
 
